@@ -199,7 +199,7 @@ export function Hero() {
                 style={{ transform: `translateY(${scrollY * 0.1}px)` }}
               >
                 <img
-                  src="/modern-urban-fountain-architectural-design-fiber-c.jpg"
+                  src="/hero1.jpg"
                   alt="Urban Architecture"
                   className="w-full h-full object-contain"
                 />
