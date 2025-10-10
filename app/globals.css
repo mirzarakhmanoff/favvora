@@ -256,24 +256,6 @@ body,
   /* =======================
         NAV global layers
         ======================= */
-  .nav-layer {
-    position: fixed;
-    inset: 0 0 auto 0; /* top fixed */
-    isolation: isolate; /* o‘z stacki */
-    z-index: var(--z-nav-root) !important;
-  }
-  .nav-backdrop {
-    position: fixed;
-    inset: 0;
-    z-index: var(--z-nav-backdrop) !important;
-  }
-  .nav-drawer {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100dvh;
-    z-index: var(--z-nav-drawer) !important;
-  }
 }
 
 /* ===========================
