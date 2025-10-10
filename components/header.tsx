@@ -5,6 +5,16 @@ import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { createPortal } from "react-dom";
+import { Phone, Send, Instagram, MessageCircle } from "lucide-react";
+
+// ====== НАСТРОЙКИ (замени на свои) ======
+const PHONE_DISPLAY = "+998 90 123 45 67";
+const PHONE_TEL = "+998901234567";
+const LINKS = {
+  telegram: "https://t.me/your_username",
+  instagram: "https://instagram.com/your_username",
+};
+// ========================================
 
 const NAV_LINKS = [
   { href: "/", label: "О нас" },
@@ -28,7 +38,6 @@ function MobileLayer({
 
   return createPortal(
     <div
-      // КЛЮЧ: когда закрыто — полное отключение событий
       className={`fixed inset-0 z-[1000] ${
         open ? "pointer-events-auto" : "pointer-events-none"
       }`}
@@ -60,12 +69,36 @@ function MobileLayer({
   );
 }
 
+function SocialIcon({
+  href,
+  label,
+  children,
+  className = "",
+}: {
+  href: string;
+  label: string;
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={label}
+      className={`inline-flex h-10 w-10 items-center justify-center rounded-xl border border-[#E5DCC8] bg-white/90 hover:bg-white transition-colors ${className}`}
+    >
+      {children}
+    </a>
+  );
+}
+
 export default function SiteNav() {
   const [open, setOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
   const pathname = usePathname();
 
-  // lock body scroll только когда open
+  // body scroll lock
   React.useEffect(() => {
     const { style } = document.body;
     const prev = style.overflow;
@@ -103,13 +136,15 @@ export default function SiteNav() {
             : "bg-[#F5F1E8]/70 backdrop-blur-md"
         }`}
       >
-        <div className="mx-auto max-w-[1600px] flex items-center justify-between">
+        <div className="mx-auto max-w-[1600px] flex items-center justify-between gap-3">
+          {/* Logo */}
           <Link href="/" className="inline-flex items-center gap-2">
             <span className="text-lg sm:text-xl font-semibold tracking-tight">
               FAVVORA.UZ
             </span>
           </Link>
 
+          {/* Desktop navigation */}
           <div className="hidden md:flex items-center gap-6 lg:gap-10 text-sm">
             {NAV_LINKS.map((l) => {
               const isActive = pathname === l.href;
@@ -127,34 +162,72 @@ export default function SiteNav() {
             })}
           </div>
 
-          <button
-            type="button"
-            aria-label={open ? "Закрыть меню" : "Открыть меню"}
-            onClick={() => setOpen((v) => !v)}
-            className="md:hidden h-11 w-11 rounded-xl border border-[#E5DCC8] bg-[#F5F1E8]/70 backdrop-blur-sm flex items-center justify-center hover:bg-[#E5DCC8]/50 transition-colors"
-          >
-            <div className="relative h-5 w-5">
-              <span
-                className={`absolute top-0 inset-x-0 h-0.5 bg-foreground transition ${
-                  open ? "translate-y-2 rotate-45" : ""
-                }`}
-              />
-              <span
-                className={`absolute top-2 inset-x-0 h-0.5 bg-foreground transition ${
-                  open ? "opacity-0" : "opacity-100"
-                }`}
-              />
-              <span
-                className={`absolute top-4 inset-x-0 h-0.5 bg-foreground transition ${
-                  open ? "-translate-y-2 -rotate-45" : ""
-                }`}
-              />
+          {/* Actions */}
+          <div className="flex items-center gap-2">
+            {/* Desktop: phone number + icons */}
+            <div className="hidden md:flex items-center gap-3">
+              <a
+                href={`tel:${PHONE_TEL}`}
+                className="hidden lg:inline-flex items-center rounded-full bg-black text-white px-4 py-2 text-sm font-medium hover:bg-black/90 transition-colors shadow-sm"
+                aria-label={`Позвонить: ${PHONE_DISPLAY}`}
+              >
+                <Phone className="h-4 w-4 mr-2" />
+                {PHONE_DISPLAY}
+              </a>
+
+              {/* Icons on desktop (md+) */}
+              <SocialIcon href={`tel:${PHONE_TEL}`} label="Позвонить">
+                <Phone className="h-5 w-5" />
+              </SocialIcon>
+
+              <SocialIcon href={LINKS.telegram} label="Telegram">
+                <Send className="h-5 w-5" />
+              </SocialIcon>
+              <SocialIcon href={LINKS.instagram} label="Instagram">
+                <Instagram className="h-5 w-5" />
+              </SocialIcon>
             </div>
-          </button>
+
+            {/* Mobile: quick call + burger */}
+            <div className="md:hidden flex items-center gap-2">
+              <a
+                href={`tel:${PHONE_TEL}`}
+                aria-label={`Позвонить: ${PHONE_DISPLAY}`}
+                className="h-11 w-11 rounded-xl border border-[#E5DCC8] bg-white/80 backdrop-blur-sm flex items-center justify-center hover:bg-white transition-colors shadow-sm"
+              >
+                <Phone className="h-5 w-5" />
+              </a>
+
+              <button
+                type="button"
+                aria-label={open ? "Закрыть меню" : "Открыть меню"}
+                onClick={() => setOpen((v) => !v)}
+                className="h-11 w-11 rounded-xl border border-[#E5DCC8] bg-[#F5F1E8]/70 backdrop-blur-sm flex items-center justify-center hover:bg-[#E5DCC8]/50 transition-colors"
+              >
+                <div className="relative h-5 w-5">
+                  <span
+                    className={`absolute top-0 inset-x-0 h-0.5 bg-foreground transition ${
+                      open ? "translate-y-2 rotate-45" : ""
+                    }`}
+                  />
+                  <span
+                    className={`absolute top-2 inset-x-0 h-0.5 bg-foreground transition ${
+                      open ? "opacity-0" : "opacity-100"
+                    }`}
+                  />
+                  <span
+                    className={`absolute top-4 inset-x-0 h-0.5 bg-foreground transition ${
+                      open ? "-translate-y-2 -rotate-45" : ""
+                    }`}
+                  />
+                </div>
+              </button>
+            </div>
+          </div>
         </div>
       </nav>
 
-      {/* Portal layer */}
+      {/* MOBILE DRAWER (icons only) */}
       <MobileLayer open={open} onClose={() => setOpen(false)}>
         <div className="px-5 py-4 border-b border-[#E5DCC8]/60 flex justify-between items-center">
           <span className="font-medium">Меню</span>
@@ -166,6 +239,27 @@ export default function SiteNav() {
             ✕
           </button>
         </div>
+
+        {/* Только иконки контактов */}
+        <div className="p-4 border-b border-[#E5DCC8]/60">
+          <div className="mb-3 text-sm text-foreground/60">
+            Быстрые контакты
+          </div>
+          <div className="flex items-center gap-3">
+            <SocialIcon href={`tel:${PHONE_TEL}`} label="Позвонить">
+              <Phone className="h-5 w-5" />
+            </SocialIcon>
+
+            <SocialIcon href={LINKS.telegram} label="Telegram">
+              <Send className="h-5 w-5" />
+            </SocialIcon>
+            <SocialIcon href={LINKS.instagram} label="Instagram">
+              <Instagram className="h-5 w-5" />
+            </SocialIcon>
+          </div>
+        </div>
+
+        {/* Навигация */}
         <ul className="flex flex-col p-3">
           {NAV_LINKS.map((l) => {
             const isActive = pathname === l.href;
@@ -185,6 +279,10 @@ export default function SiteNav() {
             );
           })}
         </ul>
+
+        <div className="mt-auto p-4 text-xs text-foreground/50">
+          © {new Date().getFullYear()} FAVVORA.UZ
+        </div>
       </MobileLayer>
     </header>
   );
