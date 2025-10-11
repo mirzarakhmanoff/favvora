@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "FAVVORA.UZ — Современные формы городской архитектуры",
   description:
     "Проектирование и производство городской мебели и архитектурных элементов из фиброцемента. Фонтаны, скамейки, вазоны для благоустройства городских пространств.",
-  generator: "v0.app",
+  generator: "favora.uz",
 };
 
 export default function RootLayout({
