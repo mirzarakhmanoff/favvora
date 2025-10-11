@@ -27,7 +27,7 @@ export function Hero() {
       <nav className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 md:px-8 lg:px-16 py-4 md:py-5 bg-background/90 backdrop-blur-lg border-b border-border/50">
         <div className="max-w-[1600px] mx-auto flex items-center justify-between">
           <div className="text-xl sm:text-2xl font-light tracking-tight">
-            FAVVORA.UZ
+            Favora.UZ
           </div>
 
           {/* Desktop Navigation */}
@@ -207,7 +207,7 @@ export function Hero() {
 
               <div className="absolute -bottom-3 sm:-bottom-6 md:-bottom-8 -left-3 sm:-left-6 md:-left-8 bg-background border border-border p-3 sm:p-4 md:p-6 rounded-sm shadow-xl max-w-[200px] sm:max-w-[250px] md:max-w-xs">
                 <div className="text-[10px] sm:text-xs md:text-sm text-muted-foreground mb-1 sm:mb-2 font-light">
-                  FAVVORA.UZ
+                  Favora.UZ
                 </div>
                 <div className="text-xs sm:text-sm md:text-base font-light leading-relaxed">
                   Современные формы городской архитектуры

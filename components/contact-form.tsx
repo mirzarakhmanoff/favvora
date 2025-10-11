@@ -61,10 +61,10 @@ export function ContactForm() {
                 <div>
                   <div className="text-sm text-stone-500 mb-1">Email</div>
                   <a
-                    href="mailto:info@favvora.uz"
+                    href="mailto:info@Favora.uz"
                     className="text-stone-900 hover:text-amber-700 transition-colors"
                   >
-                    info@favvora.uz
+                    info@Favora.uz
                   </a>
                 </div>
               </div>

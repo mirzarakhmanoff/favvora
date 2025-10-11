@@ -275,17 +275,17 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-medium mb-2">Email</h3>
                     <a
-                      href="mailto:info@favvora.uz"
+                      href="mailto:info@Favora.uz"
                       className="text-foreground/70 hover:text-[#C17A3F] transition-colors"
                     >
-                      info@favvora.uz
+                      info@Favora.uz
                     </a>
                     <br />
                     <a
-                      href="mailto:sales@favvora.uz"
+                      href="mailto:sales@Favora.uz"
                       className="text-foreground/70 hover:text-[#C17A3F] transition-colors"
                     >
-                      sales@favvora.uz
+                      sales@Favora.uz
                     </a>
                   </div>
                 </div>
@@ -295,7 +295,7 @@ export default function ContactPage() {
                 <h3 className="font-medium mb-4">Мы в социальных сетях</h3>
                 <div className="flex gap-4">
                   <a
-                    href="https://instagram.com/favvora.uz"
+                    href="https://instagram.com/Favora.uz"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-[#C17A3F]/10 rounded-full hover:bg-[#C17A3F] hover:text-white transition-all group"
@@ -303,7 +303,7 @@ export default function ContactPage() {
                     <Instagram className="w-5 h-5 text-[#C17A3F] group-hover:text-white transition-colors" />
                   </a>
                   <a
-                    href="https://facebook.com/favvora.uz"
+                    href="https://facebook.com/Favora.uz"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-[#C17A3F]/10 rounded-full hover:bg-[#C17A3F] hover:text-white transition-all group"
@@ -311,7 +311,7 @@ export default function ContactPage() {
                     <Facebook className="w-5 h-5 text-[#C17A3F] group-hover:text-white transition-colors" />
                   </a>
                   <a
-                    href="https://t.me/favvora_uz"
+                    href="https://t.me/Favora_uz"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-[#C17A3F]/10 rounded-full hover:bg-[#C17A3F] hover:text-white transition-all group"

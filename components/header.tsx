@@ -140,7 +140,7 @@ export default function SiteNav() {
           {/* Logo */}
           <Link href="/" className="inline-flex items-center gap-2">
             <span className="text-lg sm:text-xl font-semibold tracking-tight">
-              FAVVORA.UZ
+              Favora.UZ
             </span>
           </Link>
 
@@ -281,7 +281,7 @@ export default function SiteNav() {
         </ul>
 
         <div className="mt-auto p-4 text-xs text-foreground/50">
-          © {new Date().getFullYear()} FAVVORA.UZ
+          © {new Date().getFullYear()} Favora.UZ
         </div>
       </MobileLayer>
     </header>

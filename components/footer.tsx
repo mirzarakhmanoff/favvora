@@ -7,7 +7,7 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div className="md:col-span-2">
             <div className="text-2xl font-bold tracking-tight mb-4">
-              FAVVORA.UZ
+              Favora.UZ
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
               Современные формы городской архитектуры. Проектирование и
@@ -15,7 +15,7 @@ export function Footer() {
             </p>
             <div className="flex gap-4">
               <a
-                href="https://t.me/favvora"
+                href="https://t.me/Favora"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
@@ -23,7 +23,7 @@ export function Footer() {
                 <Send className="h-5 w-5" />
               </a>
               <a
-                href="https://instagram.com/favvora"
+                href="https://instagram.com/Favora"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
@@ -31,7 +31,7 @@ export function Footer() {
                 <Instagram className="h-5 w-5" />
               </a>
               <a
-                href="https://facebook.com/favvora"
+                href="https://facebook.com/Favora"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors"
@@ -93,10 +93,10 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:info@favvora.uz"
+                  href="mailto:info@Favora.uz"
                   className="hover:text-accent transition-colors"
                 >
-                  info@favvora.uz
+                  info@Favora.uz
                 </a>
               </li>
             </ul>
@@ -104,7 +104,7 @@ export function Footer() {
         </div>
 
         <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} FAVVORA.UZ. Все права защищены.</p>
+          <p>© {new Date().getFullYear()} Favora.UZ. Все права защищены.</p>
         </div>
       </div>
     </footer>

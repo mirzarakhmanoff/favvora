@@ -9,7 +9,7 @@ import SiteNav from "@/components/header";
 import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "FAVVORA.UZ — Современные формы городской архитектуры",
+  title: "Favora.UZ — Современные формы городской архитектуры",
   description:
     "Проектирование и производство городской мебели и архитектурных элементов из фиброцемента. Фонтаны, скамейки, вазоны для благоустройства городских пространств.",
   generator: "favora.uz",
