@@ -192,7 +192,7 @@ export default function ContactPage() {
                       setFormData({ ...formData, phone: e.target.value })
                     }
                     className="rounded-lg border-[#E5DCC8] focus:border-[#C17A3F] focus:ring-[#C17A3F]"
-                    placeholder="+998 90 123 45 67"
+                    placeholder="+998973434431"
                   />
                 </div>
                 <div>
@@ -258,10 +258,10 @@ export default function ContactPage() {
                     </a>
                     <br />
                     <a
-                      href="tel:+998901234567"
+                      href="tel:+998973434431"
                       className="text-foreground/70 hover:text-[#C17A3F] transition-colors"
                     >
-                      +998 90 123 45 67
+                      +998973434431
                     </a>
                   </div>
                 </div>

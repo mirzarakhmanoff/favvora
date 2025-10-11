@@ -8,8 +8,8 @@ import { createPortal } from "react-dom";
 import { Phone, Send, Instagram, MessageCircle } from "lucide-react";
 
 // ====== НАСТРОЙКИ (замени на свои) ======
-const PHONE_DISPLAY = "+998 90 123 45 67";
-const PHONE_TEL = "+998901234567";
+const PHONE_DISPLAY = "+998973434431";
+const PHONE_TEL = "+998973434431";
 const LINKS = {
   telegram: "https://t.me/your_username",
   instagram: "https://instagram.com/your_username",

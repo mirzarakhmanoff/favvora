@@ -76,10 +76,10 @@ export function ContactForm() {
                 <div>
                   <div className="text-sm text-stone-500 mb-1">Телефон</div>
                   <a
-                    href="tel:+998901234567"
+                    href="tel:+998973434431"
                     className="text-stone-900 hover:text-amber-700 transition-colors"
                   >
-                    +998 90 123 45 67
+                    +998973434431
                   </a>
                 </div>
               </div>

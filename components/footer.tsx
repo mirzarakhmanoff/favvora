@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Send } from "lucide-react"
+import { Facebook, Instagram, Send } from "lucide-react";
 
 export function Footer() {
   return (
@@ -6,10 +6,12 @@ export function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div className="md:col-span-2">
-            <div className="text-2xl font-bold tracking-tight mb-4">FAVVORA.UZ</div>
+            <div className="text-2xl font-bold tracking-tight mb-4">
+              FAVVORA.UZ
+            </div>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-              Современные формы городской архитектуры. Проектирование и производство городской мебели и архитектурных
-              элементов.
+              Современные формы городской архитектуры. Проектирование и
+              производство городской мебели и архитектурных элементов.
             </p>
             <div className="flex gap-4">
               <a
@@ -43,22 +45,34 @@ export function Footer() {
             <h3 className="font-semibold mb-4 text-foreground">Навигация</h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <a href="#about" className="text-muted-foreground hover:text-accent transition-colors">
+                <a
+                  href="#about"
+                  className="text-muted-foreground hover:text-accent transition-colors"
+                >
                   О компании
                 </a>
               </li>
               <li>
-                <a href="#products" className="text-muted-foreground hover:text-accent transition-colors">
+                <a
+                  href="#products"
+                  className="text-muted-foreground hover:text-accent transition-colors"
+                >
                   Продукция
                 </a>
               </li>
               <li>
-                <a href="#portfolio" className="text-muted-foreground hover:text-accent transition-colors">
+                <a
+                  href="#portfolio"
+                  className="text-muted-foreground hover:text-accent transition-colors"
+                >
                   Портфолио
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-muted-foreground hover:text-accent transition-colors">
+                <a
+                  href="#contact"
+                  className="text-muted-foreground hover:text-accent transition-colors"
+                >
                   Контакты
                 </a>
               </li>
@@ -70,12 +84,18 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li>г. Ташкент, Узбекистан</li>
               <li>
-                <a href="tel:+998901234567" className="hover:text-accent transition-colors">
-                  +998 90 123 45 67
+                <a
+                  href="tel:+998973434431"
+                  className="hover:text-accent transition-colors"
+                >
+                  +998973434431
                 </a>
               </li>
               <li>
-                <a href="mailto:info@favvora.uz" className="hover:text-accent transition-colors">
+                <a
+                  href="mailto:info@favvora.uz"
+                  className="hover:text-accent transition-colors"
+                >
                   info@favvora.uz
                 </a>
               </li>
@@ -88,5 +108,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
