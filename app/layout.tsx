@@ -20,6 +20,12 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ru" className="scroll-smooth">
+      <head>
+        <meta
+          name="google-site-verification"
+          content="Dd7jk6Ua5Nk_n0bPEUbDcwCS_R_18SvcHp8WkuMTImg"
+        />
+      </head>
       <body
         className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased bg-[#F5F1E8]`}
       >
